@@ -63,7 +63,15 @@
                 string num = newNum.ToString();
                 string[] paths = {@"C:\Users\Public\CS361-MS-A\images", num + ".png"};
                 string fullPath = Path.Combine(paths);
-                writeOut.Write(fullPath);
+                if (File.Exists(fullPath) == false)
+                {
+                    string notFound = "No picture found with that name.";
+                    writeOut.Write(notFound);
+                }
+                else
+                {
+                    writeOut.Write(fullPath);
+                }
             }
         }
         catch (Exception e)

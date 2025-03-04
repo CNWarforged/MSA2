@@ -2,7 +2,7 @@
 {
     public static int Main()
     {
-        string percPath = @"C:\Users\Public\CS361-MS-A\text-files\percent.txt";
+        string percPath = @"C:\Users\Jason Tang\PycharmProjects\CS361\cs361-project\image_service\text-files\percent.txt";
         if (File.Exists(percPath) == false)
         {
             Console.WriteLine("File not found.");
@@ -45,7 +45,7 @@
 
         if (worked == true)
         {
-            string imgPath = @"C:\Users\Public\CS361-MS-A\text-files\image-path.txt";
+            string imgPath = @"C:\Users\Jason Tang\PycharmProjects\CS361\cs361-project\image_service\text-files\image-path.txt";
             WriteFile(imgNum, imgPath);
             Console.WriteLine("Done.");
         }
@@ -61,7 +61,7 @@
             using (StreamWriter writeOut = new StreamWriter(imgPath))
             {
                 string num = newNum.ToString();
-                string[] paths = {@"C:\Users\Public\CS361-MS-A\images", num + ".png"};
+                string[] paths = {@"C:\Users\Jason Tang\PycharmProjects\CS361\cs361-project\image_service\images", num + ".jpg"};
                 string fullPath = Path.Combine(paths);
                 if (File.Exists(fullPath) == false)
                 {
